@@ -20,9 +20,9 @@ test_PredMat = mkg$test[,-1]
 TBV = mkg$test[,1]           # True breeding value of testing group
 ELPGV_pred = ELPGV(rep_times = 100, interation_times=20, weight_min=0, weight_max=1, 
                    weight_dimension=ncol(test_PredMat), rate_min=-0.01, rate_max=0.01, 
-				   paticle_number=20, CR = 1.0, train_PredMat=as.matrix(train_PredMat),
+		   paticle_number=20, CR = 1.0, train_PredMat=as.matrix(train_PredMat),
                    test_PredMat=as.matrix(test_PredMat), R = 0.5,IW = 1, AF1 = 2, 
-				   AF2 = 2, type ="pcc", select="auto", index=NULL)
+		   AF2 = 2, type ="pcc", select="auto", index=NULL)
 PredMat = cbind(TBV,ELPGV_pred)
 colnames(PredMat) = c("obs", "BayesA", "BayesB", "BayesCpai", "GBLUP", "ELPGV")
 cor(PredMat)
@@ -36,9 +36,9 @@ train_PredMat = read.table(system.file("exampleFile/exampleTrainingFile.txt", pa
 test_PredMat = read.table(system.file("exampleFile/exampleTestingFile.txt", package = "ELPGV"), header = T)
 ELPGV_pred = ELPGV(rep_times = 100, interation_times=20, weight_min=0, weight_max=1, 
                    weight_dimension=ncol(test_PredMat), rate_min=-0.01, rate_max=0.01, 
-				   paticle_number=20, CR = 1.0, train_PredMat=as.matrix(train_PredMat),
+		   paticle_number=20, CR = 1.0, train_PredMat=as.matrix(train_PredMat),
                    test_PredMat=as.matrix(test_PredMat), R = 0.5,IW = 1, AF1 = 2, 
-				   AF2 = 2, type ="pcc", select="auto", index=NULL)
+		   AF2 = 2, type ="pcc", select="auto", index=NULL)
 colnames(ELPGV_pred) = c("BayesA", "BayesB", "BayesCpai", "GBLUP", "ELPGV")
 head(ELPGV_pred)
 ```
