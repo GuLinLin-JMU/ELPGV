@@ -44,5 +44,5 @@ head(ELPGV_pred)
 ```
 ## How to access help
 If users have any bugs or issues or any suggestions are available, feel free to contact:<br>
-Linlin Gu: gulinlin_141006@163.com <br>
+Linlin Gu: linlin-gu@outlook.com <br>
 Prof. Ming Fang: fangming618@126.com<br>
